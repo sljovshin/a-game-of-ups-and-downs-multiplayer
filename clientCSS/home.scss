@@ -1,0 +1,149 @@
+@import 'partials/type';
+@import 'partials/header';
+
+html, body {
+	margin: 0;	
+    padding: 0;
+}
+main {
+    position: relative;
+
+}
+#header {
+    display: none;
+}
+.gridWrapper {
+    position: fixed;
+    background-image: url('/clientIMG/background.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    z-index: -1;
+
+}
+.grid-4 {
+    display: flex;
+    
+    width: 100vw;
+    direction: row;
+    @media only screen and (min-width: 600px) {
+        margin-top: -100px;
+    }
+}
+
+.character_portrait {
+    text-align: center;
+    width: 50%;
+    h3, h2 {
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        line-height: 1em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    @media only screen and (min-width: 600px) {
+        h2 {
+            font-size: 2.4em;
+        }
+        h3 {
+            font-size: 1.6em;
+        }
+    }
+}
+.portrait {
+    width: 70%;
+    filter: grayscale(2);
+}
+
+.selected {
+    filter: none;
+}
+/*
+.hero {
+    &:hover {
+        filter: none;
+        cursor: pointer;
+    }
+}*/
+
+.empty {
+    transform: scale(.9);
+    display: none;
+    @media only screen and (min-width: 1400px) {
+        display: initial;
+    }
+}
+
+.ctaSection {
+    position: fixed;
+    bottom: 30px;
+    width: 100vw;
+    @media only screen and (min-width: 600px) {
+        bottom: 60px;
+    }
+}
+.ctaBox {
+    margin: 0 auto;
+    width: 200px;
+    height: 70px;
+    padding: 5px;
+    background-color: white;
+    @media only screen and (min-width: 600px) {
+        width: 270px;
+        height: 95px;
+        padding: 10px;
+    }
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    font-size: .9em;
+    font-family: 'game-of-thrones';
+    line-height: 0;
+    user-select: none;
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active{
+        transform: scale(.95);
+    }
+
+    @media only screen and (min-width: 600px) {
+        font-size: 1em;
+    }
+}
+
+.jonSelected_cta {
+    background-color: #7C8F71;
+    border: 2px solid #465240;
+}
+
+.jonSelected_box {
+    background-color: #67795d;
+}
+
+.dannySelected_cta {
+    background-color: #994B55;
+    border: 2px solid #743940;
+}
+
+.dannySelected_box {
+    background-color: #803d46;
+}

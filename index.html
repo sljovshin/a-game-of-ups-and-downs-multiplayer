@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./clientCSS/lobby.css">
+    <link rel="stylesheet" href="./clientCSS/home.css">
+    <title>A Game of Ups and Downs</title>
+</head>
+<body>
+    <header id="header">
+        <div class="flexbox">
+            <div class="headerLogo">
+                <h1>A Game of Ups and Downs</h2>
+            </div>
+            <div class="headerTitle">
+                <h1>Hero gallery</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="bg" class="gridWrapper">
+            <div class="grid-4">
+                <div class="character_portrait empty">
+                    <img class="portrait empty" src="/clientAssets/EmptyBanner.png" alt="empty portrait">
+                </div>
+                <div class="character_portrait">
+                    <img id="jonsnow_portrait" class="portrait hero selected" data-heroname="Lord Commander Jon Snow" src="/clientAssets/JonSnowBanner.png" alt="Jonsnow portrait">
+                    <h3 id="jonTitle">Lord Commander</h3>
+                    <h2>Jon Snow</h2>
+                </div>
+                <div class="character_portrait">
+                    <img id="danarys_portrait" class="portrait hero selected" data-heroname="Danerys Targaryen, Mother of Dragons"  src="/clientAssets/DanerysBanner.png" alt="Danerys portrait">
+                    <h3 id="dannyTitle">Mother of Dragons</h3>
+                    <h2>Danerys Targaryen</h2>
+                </div>
+                <div class="character_portrait empty">
+                    <img class="portrait empty" src="/clientAssets/EmptyBanner.png" alt="empty portrait">
+                </div>
+            </div>
+        </div>
+        <div class="ctaSection">
+            <div id="ctaBox" class="ctaBox">
+                <div id="cta" class="cta">
+                    <h2 id="ctaText">ready</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="loaderModal" id="loaderModal">
+        <div class="loader">
+            <div class="face">
+                <div class="circle"></div>
+            </div>
+            <div class="face">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <h1 class="lobbyText">Waiting for another player</h1>
+    </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/clientJS/client.js"></script>
+</html>

@@ -1,0 +1,58 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    min-width: 10vh;
+    background-color: white;
+    z-index: 1;
+    color: black;
+}
+
+.headerText {
+    min-height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    align-items: center;
+    @media only screen and (min-width: 800px) {
+        font-size: 1.4em;
+    }
+    @media only screen and (min-width: 1000px) {
+        font-size: 1.8em;
+    }
+    @media only screen and (min-width: 1200px) {
+        font-size: 2em;
+    }
+}
+.headerTitle {
+    @extend .headerText;
+    @media only screen and (min-width: 800px) {
+        margin-right: 50px;
+    }
+}
+.headerLogo {
+    @extend .headerText;
+    @media only screen and (min-width: 800px) {
+        margin-left: 50px;
+    }
+}
+
+.flexbox {
+    
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    h1 {
+        font-size: 1em;
+        font-family: 'game-of-thrones';
+        line-height: 0;
+        
+    }
+    @media only screen and (min-width: 800px) {
+        flex-direction: row;
+    }
+}

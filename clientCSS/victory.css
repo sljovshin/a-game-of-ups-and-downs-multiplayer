@@ -1,0 +1,254 @@
+@font-face {
+  font-family: 'game-of-thrones';
+  src: url("../../RES/got.ttf") format("truetype");
+}
+
+h1, h2, h3 {
+  font-family: 'game-of-thrones';
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  min-width: 10vh;
+  background-color: white;
+  z-index: 1;
+  color: black;
+}
+
+.headerText, .headerTitle, .headerLogo {
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 800px) {
+  .headerText, .headerTitle, .headerLogo {
+    font-size: 1.4em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .headerText, .headerTitle, .headerLogo {
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .headerText, .headerTitle, .headerLogo {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .headerTitle {
+    margin-right: 50px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .headerLogo {
+    margin-left: 50px;
+  }
+}
+
+.flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid black;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.flexbox h1 {
+  font-size: 1em;
+  font-family: 'game-of-thrones';
+  line-height: 0;
+}
+
+@media only screen and (min-width: 800px) {
+  .flexbox {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  position: relative;
+}
+
+#canvas-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+canvas {
+  display: block;
+  z-index: 1;
+}
+
+.contentWrapper {
+  position: fixed;
+  top: 0;
+  padding-top: 5vh;
+  background-image: url("/clientIMG/background.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: -1;
+}
+
+.victory_modal {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 0px 10px;
+  width: 80%;
+  background-color: white;
+}
+
+.victory_modal img {
+  width: 150px;
+  margin-top: 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  .victory_modal {
+    width: auto;
+    padding: 50px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .victory_modal {
+    padding-top: 150px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.ctaSection {
+  position: fixed;
+  bottom: 30px;
+  width: 100vw;
+  z-index: 10000;
+}
+
+@media only screen and (min-width: 600px) {
+  .ctaSection {
+    bottom: 60px;
+  }
+}
+
+.ctaBox {
+  margin: 0 auto;
+  width: 200px;
+  height: 70px;
+  padding: 5px;
+  background-color: white;
+}
+
+@media only screen and (min-width: 600px) {
+  .ctaBox {
+    width: 500px;
+    height: 150px;
+    padding: 10px;
+  }
+}
+
+.cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid black;
+  font-size: .9em;
+  font-family: 'game-of-thrones';
+  line-height: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.cta:hover {
+  cursor: pointer;
+}
+
+.cta:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+@media only screen and (min-width: 600px) {
+  .cta {
+    font-size: 1.4em;
+  }
+}
+/*# sourceMappingURL=victory.css.map */

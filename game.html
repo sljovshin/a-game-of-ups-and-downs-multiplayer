@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="clientCSS/main.css">
+    <title>A Game of Ups and Downs</title>
+</head>
+<body>   
+    <main id="main">
+        <canvas id="canvas" class="canvas" width="1600" height="3262"></canvas>
+        <div class="hud">
+            <div class="gameDetails">
+                <div>
+                    <h1>You</h1>
+                    <table>
+                        <tr>
+                            <td><h2>Floor:</h2></td>
+                            <td><h2 class="displayNum" id="playerFloorDisplay"></h2></td>
+                        </tr>
+                        <tr>
+                            <td><h2>Room:</h2></td>
+                            <td><h2 class="displayNum" id="playerRoomDisplay"></h2></td>
+                        </tr>
+                        <tr>
+                            <td><h2>Effect:</h2></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h1>Opponent</h1>
+                    <table>
+                        <tr>
+                            <td><h2>Floor:</h2></td>
+                            <td><h2 class="displayNum" id="opponentFloorDisplay"></h2></td>
+                        </tr>
+                        <tr>
+                            <td><h2>Room:</h2></td>
+                            <td><h2 class="displayNum" id="opponentRoomDisplay"></h2></td>
+                        </tr>
+                        <tr>
+                            <td><h2>Effect:</h2></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <img src="/clientAssets/hud.png" alt="">
+            <div class="rollResult" id="rollResult">
+                <h3 id="roll"></h3>
+            </div>
+        </div>
+        <div class="dicebt">
+            <img id="rollBt" src="/clientAssets/rolldicebt.png">
+            <img id="waitBt" src="/clientAssets/waitbt.png">
+        </div>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="clientJS/world.js"></script>
+    <script src="clientJS/player.js"></script>
+    <script src="clientJS/enemy.js"></script>
+    <script src="clientJS/interaction.js"></script>
+    <script src="clientJS/playerControll.js"></script>
+    <script src="clientJS/main.js"></script>
+</body>
+</html>

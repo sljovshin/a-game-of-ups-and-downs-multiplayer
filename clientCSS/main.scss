@@ -1,0 +1,102 @@
+@import 'partials/type';
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #110000;
+    //overflow: hidden;
+}
+
+main {
+    display: flex;
+    position: relative;
+    min-width: 1600;
+    padding-top: 100px;
+    justify-content: center;
+    
+}
+.canvas {
+    box-sizing: border-box;
+    margin-bottom: 250px;
+    border: 1px black solid;
+    background-color: black;
+}
+
+.roomtile {
+    height: 250px;
+    width: 400px;
+    display: none;
+}
+
+.char {
+    height: 90px;
+    display: none;
+}
+.boss {
+    height: 130px;
+    display: none;
+}
+.dice {
+    position: fixed;
+}
+.objective {
+    display: none;
+}
+
+.hud {
+    position: fixed;
+    left: 0;
+    top: 739px;
+    box-shadow: 0 -5px 20px -5px #1d1d1d;
+} 
+
+.gameDetails {
+    position: absolute;
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+    left:30px;
+    top: 30px;
+    width: 400px;
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.2em;
+        padding: 0;
+        margin: 0;
+        margin-right: 15px;
+        line-height: 1.2em;
+    }
+}
+.floorDisplay, .roomDisplay {
+    display: flex;
+
+}
+.dicebt {
+    position: fixed;
+    left: 1443px;
+    top: 789px;
+    
+    #rollBt {
+        display: block;
+        &:hover {
+            filter: brightness(0.8);
+        }
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+    #waitBt {
+        display: none;
+    }
+    
+}
+
+.rollResult {
+    position: absolute;
+    left: 1720px;
+    top: 0px;
+    font-size: 4em;
+    display: flex;
+}

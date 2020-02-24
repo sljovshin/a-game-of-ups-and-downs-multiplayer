@@ -1,0 +1,113 @@
+@import 'partials/type';
+@import 'partials/header';
+
+
+html, body {
+	margin: 0;	
+	padding: 0;
+}
+
+main {
+	position: relative;
+}
+#canvas-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+  	height: 100%;
+ 	width: 100%;
+}
+		
+canvas {
+	display: block;
+	z-index: 1;
+}
+
+.contentWrapper {
+	position: fixed;
+	top: 0;
+	padding-top: 5vh;
+	background-image: url('/clientIMG/background.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+}
+
+.victory_modal {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100%;
+	padding: 0px 10px;
+	width: 80%;
+	
+	background-color: white;
+	img {
+		width: 150px;
+		margin-top: 5px;
+	}
+	@media only screen and (min-width: 600px) {
+		width: auto;
+		padding: 50px;
+	}
+	@media only screen and (min-width: 1200px) {
+		padding-top: 150px;
+		justify-content: flex-start;
+    }
+}
+
+.ctaSection {
+    position: fixed;
+    bottom: 30px;
+	width: 100vw;
+	z-index: 10000;
+    @media only screen and (min-width: 600px) {
+        bottom: 60px;
+    }
+}
+.ctaBox {
+    margin: 0 auto;
+    width: 200px;
+    height: 70px;
+    padding: 5px;
+    background-color: white;
+    @media only screen and (min-width: 600px) {
+        width: 500px;
+        height: 150px;
+        padding: 10px;
+    }
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+	border: 2px solid black;
+    font-size: .9em;
+    font-family: 'game-of-thrones';
+    line-height: 0;
+    user-select: none;
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active{
+        transform: scale(.95);
+    }
+
+    @media only screen and (min-width: 600px) {
+        font-size: 1.4em;
+    }
+}
