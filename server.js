@@ -65,22 +65,13 @@ function addToRoom(s1, s2) {
     s2.to(rooms[rooms.length-1]).emit('welcomeToRoom', rooms[rooms.length-1], player);
 }
   
-  function handleDisconnect() {
-    rooms.forEach((room, index) => {
-        if(io.sockets.adapter.rooms[room] === undefined) {
-            rooms.splice(rooms.indexOf(index), 1)
-        }
-    });
-    if(Object.entries(io.sockets.adapter.rooms).length === 0 && io.sockets.adapter.rooms.constructor === Object) {
-        roomCount = 0;
-    }
+function handleDisconnect() {
+  rooms.forEach((room, index) => {
+    if(io.sockets.adapter.rooms[room] === undefined) {
+        rooms.splice(rooms.indexOf(index), 1)
+      }
+  });
+  if(Object.entries(io.sockets.adapter.rooms).length === 0 && io.sockets.adapter.rooms.constructor === Object) {
+      roomCount = 0;
   }
-
-
-gameNSP.on('connection', gameHost);
-
-function gameHost() {
-
-
 }
-
