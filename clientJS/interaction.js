@@ -1,3 +1,5 @@
+const playerEffect = document.getElementById('playerEffectDisplay');
+const rivalEffect = document.getElementById('opponentEffectDisplay');
 const stairsup = [{
                         room: 10,
                         x: 400,
@@ -111,20 +113,24 @@ function playerGetBuff() {
     console.log('playerHeated: ' + playerHeated);
     if (player.x > 800 && player.x < 1200 && player.y > 1250 && player.y < 1500 && playerDoneMoving === true) {
         playerHeated = true;
+        playerEffect.innerText = 'Warm, immune to chilling effects'
     }
 }
 function rivalGetBuff() {
     console.log('rivalHeated: ' + rivalHeated);
     if (rival.x > 800 && rival.x < 1200 && rival.y > 1250 && rival.y < 1500 && rivalDoneMoving === true) {
         rivalHeated = true;
+        rivalEffect.innerText = 'Warm, immune to chilling effects'
     }
 }
 function playerGetDebuff() {   
     if (player.x > 0 && player.x < 400 && player.y > 2750 && player.y < 3000 && playerDoneMoving === true) {
         if (playerHeated === true) {
             playerHeated === false;
+            playerEffect.innerText = '';
         } else {
             playerChilled = true;
+            playerEffect.innerText = 'Chilled, movement is halfed';
         }
     }
 }
@@ -132,8 +138,10 @@ function rivalGetDebuff() {
     if (rival.x > 0 && rival.x < 400 && rival.y > 2750 && rival.y < 3000 && rivalDoneMoving === true) {
         if(rivalHeated === true) {
             rivalHeated === false;
+            rivalEffect.innerText = '';
         } else {
             rivalChilled === true;
+            rivalEffect.innerText = 'Chilled, movement is halfed';
         }
     }
 }
@@ -146,6 +154,7 @@ function playerLocationDetection() {
         }     
     }
     playerGetBuff();  
+    playerGetDebuff();
     if(player.x > 1200 && player.y > 3000 || rival.x > 1200 && rival.y > 3000) {
         context.drawImage(chestOpen, 1490, 3145, 90, 60);
     } else {
@@ -161,6 +170,7 @@ function rivalLocationDetection() {
         }     
     }
     rivalGetBuff();
+    rivalGetDebuff();
 }
 
 function playerDeterminFloor() {
